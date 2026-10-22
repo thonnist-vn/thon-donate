@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05050a">
+<title>THÒN NIST DONATE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap"><div class="logo" id="logo"><span id="logoText">THÒN NIST DONATE</span></div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1 id="heading">SUPPORT THÒN NIST</h1>
+    <p id="intro">Mỗi lượt DONATE là một động lực để phát triển dự án.</p>
+  </section>
+  <section class="stats">
+    <div class="card"><span class="mut">Tổng DONATE</span><b id="total">0đ</b></div>
+    <div class="card"><span class="mut">Lượt ủng hộ</span><b id="count">0</b></div>
+  </section>
+  <div id="pending" class="card note" hidden><span id="ptxt"></span><button class="mini" id="pview" type="button">Xem lại thanh toán</button></div>
+  <section class="grid">
+    <form id="form" class="card" novalidate>
+      <h2>Gửi DONATE</h2>
+      <label>Tên người DONATE<input id="name" maxlength="40" autocomplete="nickname" placeholder="Tên của bạn"></label>
+      <div class="chips" id="chips" role="group" aria-label="Mức DONATE nhanh"></div>
+      <label>Số tiền (đ)<input id="amount" inputmode="numeric" autocomplete="off" placeholder="Nhập số tiền"></label>
+      <label>Lời nhắn<textarea id="msg" maxlength="120" rows="3" placeholder="Lời nhắn cho dự án (không bắt buộc)"></textarea></label>
+      <fieldset class="methods">
+        <legend>Phương thức</legend>
+        <label class="tile"><input type="radio" name="method" value="mb" checked><span>MB BANK</span></label>
+        <label class="tile"><input type="radio" name="method" value="zalo"><span>ZaloPay</span></label>
+      </fieldset>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" id="go">DONATE</button>
+    </form>
+    <aside class="card">
+      <h2>Người ủng hộ mới nhất</h2>
+      <ul id="list" class="list"></ul>
+    </aside>
+  </section>
+</main>
+<footer class="foot">THÒN NIST DONATE · <a href="admin.html">Quản trị</a></footer>
+
+<div id="modal" class="modal" hidden><div class="sheet" role="dialog" aria-modal="true"><div id="mbody"></div><button class="btn ghost" id="mclose" type="button">Đóng</button></div></div>
+<div id="thanks" class="modal" hidden><div class="sheet center"><div class="rings"><i></i><i></i><i></i></div><h2>Cảm ơn bạn!</h2><p id="tmsg"></p><button class="btn" id="tclose" type="button">Đóng</button></div></div>
+<div id="toast" class="toast" role="status"></div>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

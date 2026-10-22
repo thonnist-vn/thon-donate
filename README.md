@@ -1,5 +1,3 @@
-# thon-donate
-thon-donate
 # THÒN NIST DONATE
 
 Website tĩnh: HTML + CSS + JavaScript thuần, không cần build, không cần cài ứng dụng.
@@ -33,4 +31,3 @@ Cập nhật data.js: upload đè lên file cũ, chờ 1–2 phút.
 - Tên và lời nhắn khách nhập chỉ nằm trên thiết bị của họ cho đến khi họ gửi cho bạn.
 - QR ZaloPay là QR tĩnh, không gắn sẵn số tiền. QR MB tạo bằng img.vietqr.io (cần mạng), có sẵn số tiền và nội dung.
 - Tự động xác minh + đồng bộ nhiều người: cần backend (ví dụ Supabase + webhook SePay/Casso).
-- 

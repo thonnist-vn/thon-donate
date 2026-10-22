@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Quản trị · THÒN NIST DONATE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+<div class="logo"><span>QUẢN TRỊ</span></div>
+
+<form id="gate" class="card narrow" novalidate>
+  <h2 id="gt"></h2><p id="gp" class="mut"></p>
+  <label>Mật khẩu<input type="password" id="pw" autocomplete="current-password"></label>
+  <label id="pw2l" hidden>Nhập lại mật khẩu<input type="password" id="pw2" autocomplete="new-password"></label>
+  <p class="err" id="gerr" role="alert"></p>
+  <button class="btn" id="gb"></button>
+</form>
+
+<div id="app" hidden>
+  <div class="bar"><a class="mini" href="index.html">Xem trang</a><button class="mini" id="out" type="button">Đăng xuất</button></div>
+
+  <form id="cfg" class="card" novalidate>
+    <h2>Nội dung và thanh toán</h2>
+    <div class="two">
+      <label>Tên website<input id="title" maxlength="40"></label>
+      <label>Tiêu đề lớn<input id="heading" maxlength="60"></label>
+    </div>
+    <label>Giới thiệu<textarea id="intro" rows="2" maxlength="200"></textarea></label>
+    <label>Mức DONATE nhanh (cách nhau bằng dấu phẩy)<input id="amounts" inputmode="numeric"></label>
+    <div class="two">
+      <label>MB Bank: số tài khoản<input id="mbAcc" inputmode="numeric"></label>
+      <label>MB Bank: tên chủ tài khoản<input id="mbName" maxlength="40"></label>
+      <label>ZaloPay: số điện thoại (không bắt buộc)<input id="zPhone" inputmode="numeric"></label>
+      <label>ZaloPay: tên chủ tài khoản<input id="zName" maxlength="40"></label>
+    </div>
+    <label>Đường dẫn ảnh QR ZaloPay<input id="zQr" placeholder="assets/zalopay-qr.jpg"></label>
+    <label>Đường dẫn liên hệ để người ủng hộ gửi tên và lời nhắn (Zalo, Messenger...)<input id="contact" placeholder="https://..."></label>
+    <label class="chk"><input type="checkbox" id="showQR"> Hiển thị mã QR trong khung thanh toán</label>
+    <label class="chk"><input type="checkbox" id="showNames"> Hiển thị tên người ủng hộ</label>
+    <div class="two">
+      <label>Màu neon 1<input type="color" id="c1"></label>
+      <label>Màu neon 2<input type="color" id="c2"></label>
+      <label>Ảnh nền (đường dẫn)<input id="bg" placeholder="assets/bg.jpg"></label>
+      <label>Logo (đường dẫn)<input id="logo" placeholder="assets/logo.png"></label>
+    </div>
+    <p class="err" id="cerr" role="alert"></p>
+    <button class="btn" type="submit">Lưu cấu hình</button>
+  </form>
+
+  <section class="card">
+    <h2>Giao dịch đã xác minh</h2>
+    <p class="mut small">Chỉ thêm sau khi bạn đã thấy tiền vào tài khoản. Nhập mã THON... trong nội dung chuyển tiền để người ủng hộ nhận được lời cảm ơn trên thiết bị của họ.</p>
+    <form id="add" class="inline" novalidate>
+      <input id="dn" placeholder="Tên" maxlength="40">
+      <input id="da" inputmode="numeric" placeholder="Số tiền">
+      <input id="dc" placeholder="Mã THON..." maxlength="12">
+      <input id="dm" placeholder="Lời nhắn" maxlength="120">
+      <button class="btn sm">Thêm giao dịch</button>
+    </form>
+    <div class="tw"><table><thead><tr><th>Thời gian</th><th>Người ủng hộ</th><th>Số tiền</th><th>Lời nhắn</th><th>Thao tác</th></tr></thead><tbody id="rows"></tbody></table></div>
+  </section>
+
+  <section class="card">
+    <h2>Xuất bản thay đổi</h2>
+    <p class="mut small" id="dirty"></p>
+    <div class="acts"><button class="btn sm" id="exp" type="button">Tải data.js</button><button class="btn sm ghost" id="drop" type="button">Bỏ bản nháp</button></div>
+  </section>
+</div>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script src="data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
